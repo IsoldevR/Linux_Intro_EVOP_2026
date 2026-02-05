@@ -1,7 +1,11 @@
 # Introduction to Linux systems
 This repository has all the exercises and materials for the Introduction to Linux systems session on day 1 of the EVOP 2026 course. All exercises are in the README.md.
-You can copy-paste any commands that you don't want to type out to your terminal. However, please realise that it will be good practise to type out commands yourself, as getting used to th$
+You can copy-paste any commands that you don't want to type out to your terminal. However, please realise that it will be good practise to type out commands yourself, as getting used to them will make you more flexible troubleshooting your errors over the next days, and it will make you more swift in your future coding efforts!
 Please find the slides <placeholder>
+
+Remember, being able to code is a super power!
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e95f04a7-ce26-4240-8fa1-505b5119bee3" />
+
 
 ## Welcome
 Please set up your work station such that you are comfortable - and make sure not to keep it tidy!!
