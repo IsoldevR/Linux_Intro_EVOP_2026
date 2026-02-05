@@ -23,12 +23,12 @@ The output of one command gets used in the next.
 ssh <your user name>@<server>
 ```
 
-###Several types of server
+### Several types of server
 - Cloud server
 - Server/cluster manager
 - A server manager
 
-###Nodes, CPU's & Memory
+### Nodes, CPU's & Memory
 Login node vs. computational node
 Connectivity
 ```
@@ -45,18 +45,15 @@ Interactive node
 ssh <your user name>@<server>
 ```
 
-###Several types of server
+### Several types of server
 - Cloud server
 - Server/cluster manager
 - A server manager
 
-###Nodes, CPU's & Memory
+### Nodes, CPU's & Memory
 Login node vs. computational node
-Connectivity
-```
-(+ Exercise)
-```
 
+### Connectivity
 Screen
 ```
 (+ Exercise) ## is it installed?
@@ -67,22 +64,21 @@ Interactive node
 (+ Exercise) ## is it installed?
 ```
 
-###Files & folders (+ Exercise)
+### Files & folders (+ Exercise)
 - moving files between local <> server
 - what is the folder structure?
 - the expences
 - what can we do about that? (zip & remove)
 
-###Tricks
-- Wildcards
+### Tricks
+Wildcards
 ```
 (+Exercise)
 ```
-- Using keys (?)
-- the magic tab
+Using keys (?)
+the magic tab
 
-
-###Executing commands
+### Executing commands
 - a command
 - command structure
 - where is the user manual?
@@ -92,7 +88,7 @@ Interactive node
 (+ Exercise)
 ```
 
-###The most used commands
+### The most used commands
 pwd, cd, ls
 ```
 (+Exercise)
@@ -127,25 +123,26 @@ awk
 (+Exercise)
 ```
 
-###Working on zipped files
+### Working on zipped files
 zcat etc. (+ Exercise)
 ```
 exercise
 ```
 
-###Piping
+### Piping
 pipes
 ```
 (+ Exercise)
 ```
 
-###Expressions
+### Expressions
 Boolean expressions
 ```
 (+ Exercise)
 ```
 
-###Editing a file
+## Moving from commands to scripts
+### Editing a file
 - nano
 ```
 (+ Exercise)
@@ -153,7 +150,8 @@ Boolean expressions
 - vim
 - vi
 - emacs
-###a script
+
+### A script
 - basic elements
 - annotation of a script
 - good practices
@@ -161,17 +159,23 @@ Boolean expressions
 exercise
 ```
 
-###concepts
+### More concepts
 - a loop
 - an array
-
+```
+exercise
+```
+  
 ## The Advanced Stuff (just so you know)
-      - add managing environments/conda?
-      - pipelines / snakemake / ?
-      - add containers / images / etc.?
+- add managing environments/conda?
+- pipelines / snakemake / ?
+- add containers / images / etc.?
 
 #### Extra exercise !
 Can you disect this command, and find out what it will do?
+```
+bcftools query -i'QUAL>20 && DP>10 && F_MISSING<0.5 && MAF>0.01' -f'%CHROM %POS %QUAL %DP\n' calls_60.bcf | head
+```
 ```
 bcftools query -i'QUAL>20 && DP>10 && F_MISSING<0.5 && MAF>0.01' -f'%CHROM %POS %QUAL %DP\n' calls_60.bcf | head
 ```
