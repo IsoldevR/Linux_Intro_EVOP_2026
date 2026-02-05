@@ -4,8 +4,6 @@ You can copy-paste any commands that you don't want to type out to your terminal
 Please find the slides <placeholder>
 
 Remember, being able to code is a super power!
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e95f04a7-ce26-4240-8fa1-505b5119bee3" />
-
 
 ## Welcome
 Please set up your work station such that you are comfortable - and make sure not to keep it tidy!!
