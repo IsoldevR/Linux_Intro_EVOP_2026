@@ -43,7 +43,7 @@ Screen
 
 Interactive node
 ```
-ssh <your user name>@<server>
+srun -N 1 -c 4 --mem-per-cpu=4G -t 08:00:00 --pty bash
 ```
 
 ### Several types of server
