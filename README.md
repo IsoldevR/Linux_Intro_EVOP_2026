@@ -6,7 +6,7 @@ Please find the slides <placeholder>
 Remember, being able to code is a super power!
 
 ## Welcome
-Please set up your work station such that you are comfortable - and make sure not to keep it tidy!!
+Please set up your work station such that you are comfortable - and make sure to keep it tidy!!
 
 ## Logistics of the course
 - Introducing the TA's
