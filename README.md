@@ -19,7 +19,7 @@ The bare bones - we need heavy computation to work as efficiently as possible.
 The output of one command gets used in the next.
 
 ### Loggin onto this server
-<placeholder for log in to the server>
+<placeholder for instructions to log into the server>
 ```
 ssh <your user name>@<server>
 ```
