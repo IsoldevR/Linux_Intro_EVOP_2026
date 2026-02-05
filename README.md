@@ -171,11 +171,8 @@ exercise
 - pipelines / snakemake / ?
 - add containers / images / etc.?
 
-#### Extra exercise !
+#### Extra exercises !
 Can you disect this command, and find out what it will do?
-```
-bcftools query -i'QUAL>20 && DP>10 && F_MISSING<0.5 && MAF>0.01' -f'%CHROM %POS %QUAL %DP\n' calls_60.bcf | head
-```
 ```
 bcftools query -i'QUAL>20 && DP>10 && F_MISSING<0.5 && MAF>0.01' -f'%CHROM %POS %QUAL %DP\n' calls_60.bcf | head
 ```
