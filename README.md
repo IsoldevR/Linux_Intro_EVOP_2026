@@ -9,7 +9,6 @@ Remember, being able to code is a super power!
 Please set up your work station such that you are comfortable - and make sure not to keep it tidy!!
 
 ## Logistics of the course
-Main points:
 - Introducing the TA's
 - We use: Post-Its!!
 - Set up and log into the desktop (you have a paper?)
