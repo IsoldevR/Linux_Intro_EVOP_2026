@@ -55,20 +55,22 @@ srun -N 1 -c 4 --mem-per-cpu=4G -t 08:00:00 --pty bash
 - the expences
 - what can we do about that? (zip & remove)
 
-Exercise 1 download the slides to your local machine
+Exercise 1.1 download the slides to your local machine
 ```
 ssh ... # make correct command here
 ```
 
 ### Tricks
 Wildcards
+
+Exercise 1.2 download all pdf files, by replacing the file name in the previous command with one of the discussed wildcards:
 ```
-(+Exercise)
+<same command as above>
 ```
 Using keys (?)
 The magic "tab"
 
-Exercise 2 download the slides to your local machine again, this time use the magic "tab"
+Exercise 1.3 download the slides to your local machine again, this time use the magic "tab"
 ```
 <same command as above but without the path finished>
 ```
@@ -77,20 +79,25 @@ Exercise 2 download the slides to your local machine again, this time use the ma
 - a command
 - command structure
 - where is the user manual?
-- command structure
-- where is the user manual?
+
+Exercise 1.4 See if you can identify what the following command is doing:
 ```
-(+ Exercise)
+<same command as above but to upload> ## need to check if allowed
 ```
 
 ### The most used commands
 pwd, cd, ls
+
+Exercise 2.1 go to the folder from which we downloaded the pdf with the slides using cd
 ```
-(+Exercise)
+cd <file path>
 ```
+
 mv, cp (scp), rm, get
+
+Excercise 2.2 make a copy of a file and name it "<your name>_copy.txt" ## NOTE: Get may need to be installed, not in cheat sheet
 ```
-(+Exercise) ## NOTE: Get may need to be installed, not in cheat sheet
+cp <file to be made>.txt <your name>_copy.txt
 ```
 cat
 ```
