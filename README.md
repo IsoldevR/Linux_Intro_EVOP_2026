@@ -95,31 +95,39 @@ cd <file path>
 
 mv, cp (scp), rm, get
 
-Excercise 2.2 make a copy of a file and name it "<your name>_copy.txt" ## NOTE: Get may need to be installed, not in cheat sheet
+Exercise 2.2 make a copy of a file and name it "<your name>_copy.txt" ## NOTE: Get may need to be installed, not in cheat sheet
 ```
 cp <file to be made>.txt <your name>_copy.txt
 ```
+
 cat
+Exercise 2.3 find out what cat can do by summoning the user manual
 ```
-(+Exercise)
+man cat
 ```
 tar, gzip, unzip
-```
-(+Exercise) ## NOTE: tar, gzip and unzip may need to be installed, not in cheat sheet
 
-```
 more, less, most
+
+Exercise 2.4 lets find out what was actually in that file that you made a copy of: feel free to also test more and most
 ```
-(+Exercise)
+less <file we copied>
 ```
+
 head, tail
+Exercise 2.5 modify the head command to print only the first five lines of the text
 ```
-(+Exercise)
+head <file>
 ```
+
 grep
+
+Exercise 2.6 find in this file, any mentions of some gene
+Exercise 2.6+ if you are bored by this tutorial so far, try piping the output into "head" to display the first 20 occurences (if you have no clue what "pipes" are; no worries, we're going to discuss pipes soon!) 
 ```
-(+Exercise)
+grep <pattern> <file>
 ```
+
 awk
 ```
 (+Exercise)
@@ -127,28 +135,27 @@ awk
 
 ### Working on zipped files
 zcat etc. (+ Exercise)
+
+Exercise 3 do the above but with a zipped file:
 ```
-exercise
+
 ```
 
 ### Piping
 pipes
-```
-(+ Exercise)
-```
 
-### Expressions
-Boolean expressions
+Exercise 4 make a command that takes the header of two <some #filetype> files and concatenates it into a new file named two_headers.txt, and see what is in the file. Tip: have a look at what defines the header in one of the file types first. 
 ```
-(+ Exercise)
+head <file>
+grep <pattern> <file 1> <file 2> > two_headers.txt
+head two_headers.txt
 ```
+Exercise 4+ can you do combine the last two commands into a oneliner?
 
 ## Moving from commands to scripts
+
 ### Editing a file
 - nano
-```
-(+ Exercise)
-```
 - vim
 - vi
 - emacs
@@ -157,15 +164,52 @@ Boolean expressions
 - basic elements
 - annotation of a script
 - good practices
+
+We are ready to write our first script, lets' make a new file in our favourite, own, home directory!
+
+Exercise 5.1 go to your home directory, make a new directory named "intro_bash", and in that directory, make a new file named "my_first_script.sh"
 ```
-exercise
+cd ~
+mkdir intro_bash
+nano my_first_script.sh
+```
+
+Exercise 5.2 now type in the first bash line that is needed, a comment to let your future self know what this script is going to do, and use the "echo" command to let the script return a message to the terminal.
+```
+#!/bin/bash
+# This is a comment to remind myself that echo is a command to print something to the terminal
+echo "Hello, World!"
+```
+And of course: execute the script!!
+
+Exercise 5.2+ now make a new script that concatenates the output of searching for the gene "xx" in two files into one 
+```
+#!/bin/bash
+# This script concatenates the output of searching for the gene "xx" in two files into one
+grep <pattern> <file1> <file2> > <pattern>.txt
+echo "done!"
+```
+
+Exercise 5.2++ now make a new script that concatenates the output of searching for the gene "xx" in two files into one 
+```
+#!/bin/bash
+# This script concatenates the output of searching for the gene "xx" in two files into one
+grep <pattern> <file1> <file2> > <pattern>.txt
+echo "done!"
 ```
 
 ### More concepts
 - a loop
 - an array
+
+Exercise 6 write a script that loops through all files in the directory xx to grep for gene "xx" and concatenate the results in a new file
 ```
-exercise
+#!/bin/bash
+# This script loops concatenates the output of searching for the gene "xx" in two files into one
+for file in *_output.txt; do
+grep <pattern> file | cat pattern.txt > pattern.txt
+done
+echo "done!"
 ```
   
 ## The Advanced Stuff (just so you know)
@@ -173,7 +217,7 @@ exercise
 - pipelines / snakemake / ?
 - add containers / images / etc.?
 
-#### Extra exercises !
+#### More extra exercises !
 Can you disect this command, and find out what it will do?
 ```
 bcftools query -i'QUAL>20 && DP>10 && F_MISSING<0.5 && MAF>0.01' -f'%CHROM %POS %QUAL %DP\n' calls_60.bcf | head
