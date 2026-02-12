@@ -75,6 +75,18 @@ Exercise 1.3 download the slides to your local machine again, this time use the 
 <same command as above but without the path finished>
 ```
 
+Exercise 1.4 if your connection to the server doesn't work for some reasong; you can download the files to your computer directly:
+```
+wget https://github.com/IsoldevR/Linux_Intro_EVOP_2026/master.zip
+unzip master.zip
+```
+
+Just a check! Where were you when you downloaded these files?
+```
+pwd
+```
+If that was not where you thought you were, try to correct your mistake or call a TA!
+
 ### Executing commands
 - a command
 - command structure
@@ -88,20 +100,22 @@ Exercise 1.4 See if you can identify what the following command is doing:
 ### The most used commands
 pwd, cd, ls
 
-Exercise 2.1 go to the folder from which we downloaded the pdf with the slides using cd
+Exercise 2.1 go to the folder from which we downloaded the pdf with the slides using cd, and see what files are there
 ```
 cd <file path>
+ls
 ```
+Exercise 2.2 which parameter can be used for ls to sort files by size?
 
 mv, cp (scp), rm, get
 
-Exercise 2.2 make a copy of a file and name it "<your name>_copy.txt" ## NOTE: Get may need to be installed, not in cheat sheet
+Exercise 2.3 make a copy of a file and name it "<your name>_copy.txt" ## NOTE: Get may need to be installed, not in cheat sheet
 ```
 cp <file to be made>.txt <your name>_copy.txt
 ```
 
 cat
-Exercise 2.3 find out what cat can do by summoning the user manual
+Exercise 2.4 find out what cat can do by summoning the user manual
 ```
 man cat
 ```
@@ -109,21 +123,21 @@ tar, gzip, unzip
 
 more, less, most
 
-Exercise 2.4 lets find out what was actually in that file that you made a copy of: feel free to also test more and most
+Exercise 2.5 lets find out what was actually in that file that you made a copy of: feel free to also test more and most
 ```
 less <file we copied>
 ```
 
 head, tail
-Exercise 2.5 modify the head command to print only the first five lines of the text
+Exercise 2.6 modify the head command to print only the first five lines of the text
 ```
 head <file>
 ```
 
 grep
 
-Exercise 2.6 find in this file, any mentions of some gene
-Exercise 2.6+ if you are bored by this tutorial so far, try piping the output into "head" to display the first 20 occurences (if you have no clue what "pipes" are; no worries, we're going to discuss pipes soon!) 
+Exercise 2.7 find in this file, any mentions of some gene
+Exercise 2.7+ if you are bored by this tutorial so far, try piping the output into "head" to display the first 20 occurences (if you have no clue what "pipes" are; no worries, we're going to discuss pipes soon!) 
 ```
 grep <pattern> <file>
 ```
