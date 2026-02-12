@@ -30,39 +30,23 @@ ssh <your user name>@<server>
 - A server manager
 
 ### Nodes, CPU's & Memory
-Login node vs. computational node
-Connectivity
-```
-(+ Exercise)
-```
+- what are nodes?
+- what are CPU's?
+- what is "the memory"?
+- login node vs. computational node
 
-Screen
+### Connectivity
+Using a screen
 ```
 (+ Exercise) ## is it installed?
 ```
-
-Interactive node
-```
-srun -N 1 -c 4 --mem-per-cpu=4G -t 08:00:00 --pty bash
-```
-
-### Several types of server
-- Cloud server
-- Server/cluster manager
-- A server manager
 
 ### Nodes, CPU's & Memory
 Login node vs. computational node
 
-### Connectivity
-Screen
-```
-(+ Exercise) ## is it installed?
-```
-
 Interactive node
 ```
-(+ Exercise) ## is it installed?
+srun -N 1 -c 4 --mem-per-cpu=4G -t 08:00:00 --pty bash 
 ```
 
 ### Files & folders (+ Exercise)
@@ -71,13 +55,23 @@ Interactive node
 - the expences
 - what can we do about that? (zip & remove)
 
+Exercise 1 download the slides to your local machine
+```
+ssh ... # make correct command here
+```
+
 ### Tricks
 Wildcards
 ```
 (+Exercise)
 ```
 Using keys (?)
-the magic tab
+The magic "tab"
+
+Exercise 2 download the slides to your local machine again, this time use the magic "tab"
+```
+<same command as above but without the path finished>
+```
 
 ### Executing commands
 - a command
