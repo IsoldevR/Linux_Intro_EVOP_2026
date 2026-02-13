@@ -1,12 +1,12 @@
 # Introduction to Linux systems
-This repository has all the exercises and materials for the Introduction to Linux systems session on day 1 of the EVOP 2026 course. All exercises are in the README.md.
+*This repository has all the exercises and materials for the Introduction to Linux systems session on day 1 of the EVOP 2026 course. All exercises are in the README.md.
 You can copy-paste any commands that you don't want to type out to your terminal. However, please realise that it will be good practise to type out commands yourself, as getting used to them will make you more flexible troubleshooting your errors over the next days, and it will make you more swift in your future coding efforts!
-Please find the slides <placeholder>
+Please find the slides /<placeholder/>*
 
-Remember, being able to code is a super power!
+**Remember, being able to code is a super power!**
 
 ## Welcome
-Explainer:
+*Explainer:*
 Please set up your work station such that you are comfortable - and make sure to keep it tidy!!
 
 ## Logistics of the course
@@ -27,7 +27,7 @@ Use your paper to follow the instructions to log into your local computer
 USE YOUR STICKY NOTES TO SHOW WHEN YOU ARE DONE!
 
 ### Explore the local computer
-Exercise 1 Click some things, then open the terminal
+**Exercise 1** Click some things, then open the terminal
 
 In the open terminal, we are going to see the file structure by:
 ```
