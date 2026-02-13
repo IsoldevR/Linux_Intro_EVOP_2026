@@ -245,44 +245,53 @@ Q: Aww ... that is so sad ... there is an error! Any idea what happened to this 
 
 clear, exit
 
-Exercise 9.4 
 ```
 clear
-exit
 ```
 
 ### Searching in files
 grep
 
-Exercise 2.7 find in this file, any mentions of some gene
-Exercise 2.7+ if you are bored by this tutorial so far, try piping the output into "head" to display the first 20 occurences (if you have no clue what "pipes" are; no worries, we're going to discuss pipes soon!) 
+Exercise 10 First, see what there actually is in this file by your tool of choice. Then find in this file, any mentions of the mitogenome (MH893761.1)
 ```
-grep <pattern> <file>
+less E10_Sample_1_mosdepth_summary.txt
+grep "MH893761.1" E10_Sample_1_mosdepth_summary.txt
 ```
+Exercise 10+ If you are having a very easy time following this tutorial so far, try piping the output into "head" to display the first 20 occurences. We are going to discuss pipes soon! 
 
+### Searching in files; advanced
 awk
+
+Exercise 11 Although grep allows to print the line where you found your mitogenome, sometimes you would like to only print a couple of columns, or do calculations with them. Try printing only the mean, max, and minimum depth of the reads from this sample to the mitogenome.
 ```
-(+Exercise)
+awk '$1 == "MH893761.1" {print $1, $4, $5, $6}' E10_Sample_1_mosdepth_summary.txt 
+```
+Exercise 11+ You may be interested in any contigs (chrom) that have a depth higher than ten reads. For example, when you are worried about duplicated regions in your genome. Use awk to filter the file!
+```
+awk '$4 > 10 {print $1, $4, $5, $6}' E10_Sample_1_mosdepth_summary.txt 
+```
+Exercise 11++ Hm, maybe we are worried about these regions which get a lot of reads aligned. Let's make a list of chromosomes to exclude from our next analysis. You will again need a pipe!
+```
+awk '$4 > 10 {print $1}' E10_Sample_1_mosdepth_summary.txt > contig_10_depth.txt
+less contig_10_depth.txt
 ```
 
 ### Working on zipped files
-zcat etc. (+ Exercise)
-
-Exercise 3 do the above but with a zipped file:
-```
-
-```
+zcat etc.
 
 ### Piping
 pipes
 
-Exercise 4 make a command that takes the header of two <some #filetype> files and concatenates it into a new file named two_headers.txt, and see what is in the file. Tip: have a look at what defines the header in one of the file types first. 
+Exercise 12.1 Get the depth statistics of the reads mapping to the mitogenome, and make a new file out of it.
 ```
-head <file>
-grep <pattern> <file 1> <file 2> > two_headers.txt
-head two_headers.txt
+grep "MH893761.1" E10_*.txt > mito_depth.txt
 ```
-Exercise 4+ can you do combine the last two commands into a oneliner?
+Tip: use a wildcard!
+
+Exercise 12.2 Make an overview of contigs that had a high amount of reads mapping to them for both samples
+```
+awk '$4 > 10 {print $1, $4, $5, $6}' E10_Sample_1_mosdepth_summary.txt 
+```
 
 ## Moving from commands to scripts
 
