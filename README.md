@@ -24,7 +24,7 @@ Use your paper to follow the instructions to log into your local computer
 USE YOUR STICKY NOTES TO SHOW WHEN YOU ARE DONE!
 
 ### Explore the local computer
-Click some things, then open the terminal
+Exercise 1 Click some things, then open the terminal
 
 In the open terminal, we are going to see the file structure by:
 ```
@@ -58,13 +58,13 @@ USE YOUR STICKY NOTES TO SHOW WHEN YOU ARE DONE!
 - login node vs. computational node
 
 ### Logging in to the server (remote)
-Use your paper to follow the instructions to log onto the server
+Exercise 2 Use your paper to follow the instructions to log onto the server
 ```
 ssh # put here the log + -C
 ```
 
 ### Connectivity
-Using a screen to maintain a program running on the server
+Exercise 3 Using a screen to maintain a program running on the server
 ```
 screen -S testing_a_screen
 ```
@@ -78,6 +78,7 @@ Now you can re-attach to the screen:
 ```
 screen -r testing_a_screen
 ```
+Tip: you can use your TAB key again to finish the name of the screen
 
 Now you can close this screen in two ways.
 1. If you are in the screen:
@@ -90,13 +91,18 @@ exit
 screen -X -S testing_a_screen kill
 ```
 
-Tip: you can use your TAB key again to finish the name of the screen
+Just one more thing; what if you don't know whether you are in a screen or not?
+```
+screen -ls
+```
+The response to this command will be a list of your active screen(s) with notes of (Detached) and (Attached). However, it will also show (Attached) if you are connected in another terminal. So then you can use ctrl + a + d to try and detach again in case you are still in your screen. And nothing will happen if you are not in the screen.
 
 ### Nodes, CPU's & Memory
 Login node vs. computational node
 
 Interactive node
 ```
+## do not run this as it does not work on our machines / server
 srun -N 1 -c 4 --mem-per-cpu=4G -t 08:00:00 --pty bash 
 ```
 
@@ -110,7 +116,7 @@ We will take a break now!
 
 The following exercises are done on the LOCAL machine!
 
-Exercise 1.1 download the slides to your local machine
+Exercise 4 download the slides to your local machine
 ```
 ssh ... # make correct command here
 ```
@@ -119,7 +125,7 @@ Tip: this has to be run on your local machine !
 ### Tricks
 Wildcards
 
-Exercise 1.2 download all pdf files, by replacing the file name in the previous command with one of the discussed wildcards:
+Exercise 5.1 download all pdf files, by replacing the file name in the previous command with one of the discussed wildcards:
 ```
 <same command as above>
 ```
@@ -129,18 +135,18 @@ Ctrl + C (cancel)
 The magic "tab"
 And the command "clear"
 
-Exercise 1.3 download the slides to your local machine again, this time use the magic "tab"
+Exercise 5.2 download the slides to your local machine again, this time use the magic "tab"
 ```
 <same command as above but without the path finished>
 ```
 
-Exercise 1.4a if your connection to the server doesn't work for some reason; you can download the files to your computer directly:
+Exercise 5.3a if your connection to the server doesn't work for some reason; you can download the files to your computer directly:
 ```
 wget https://github.com/IsoldevR/Linux_Intro_EVOP_2026/master.zip
 unzip master.zip
 ```
 
-Exercise 1.4b Just a check! Where were you when you downloaded these files? Run the following command, and it should return to you the file path where you are:
+Exercise 5.3b Just a check! Where were you when you downloaded these files? Run the following command, and it should return to you the file path where you are:
 ```
 pwd
 ```
@@ -151,7 +157,7 @@ If that was not where you thought you were, try to correct your mistake or call 
 - command structure
 - where is the user manual?
 
-Exercise 1.5 See if you can identify what the following command is doing:
+Exercise 6 See if you can identify what the following command is doing:
 ```
 <same command as above but to upload> ## need to check if allowed
 ```
@@ -160,43 +166,42 @@ Exercise 1.5 See if you can identify what the following command is doing:
 pwd, cd, ls
 
 The follwoing exercises we will do on the server!
-Exercise 2.1 go to the folder from which we downloaded the pdf with the slides using cd, and see what files are there
+Exercise 7 Go to the folder from which we downloaded the pdf with the slides using cd, and see what files are there
 ```
 cd <file path>
 ls
 ```
 
-Exercise 2.2 which parameter can be used for ls to sort files by size?
+Exercise 7.2 which parameter can be used for ls to sort files by size?
 ```
 man ls
 ls -S
 ```
 Tip: there are instructions to navigate the man page highlighted in the bottom of your terminal when the man page is open!
 
-Exercise 2.3 We're going some places now! You can use cd to go to the home directory (~) and one level up (../) .. make sure to keep reading this exercise until you are on safe ground again!
+Exercise 7.3 We're going some places now! You can use cd to go to the home directory (~) and one level up (../) .. make sure to keep reading this exercise until you are on safe ground again!
 ```
 cd ~
 cd ../
 ```
 
-If you ran these commands you should be ... one folder up from your home directory? Where is that?
+Exercise 7.4 If you ran these commands you should be ... one folder up from your home directory? Where is that?
 ```
 ls
 pwd
 ```
 
-AAAAHHH!! We are now somewhere where we're not supposed to be ... We don't want to break into other peoples data! Where is our own data? ... How do we solve this? PANIC!!!!
+Exercise 7.5 AAAAHHH!! We are now somewhere where we're not supposed to be ... We don't want to break into other peoples data! Where is our own data? ... How do we solve this? PANIC!!!!
 ```
 cd ~
 ```
 ... now we're back in our home folder ! Saved ourselves! Go back into the folder you made with mkdir to find back the files that we need for the next exercise.
 
 
-
+### More most used commands:
 mv, cp (scp), rm, get
 
-
-Exercise 2.3 make a copy of a file and name it "<your name>_copy.txt" ## NOTE: Get may need to be installed, not in cheat sheet
+Exercise 8.1 Make a copy of a file and name it "<your name>_copy.txt" ## NOTE: Get may need to be installed, not in cheat sheet
 ```
 cp copy_this_file.txt <your name>_copy.txt
 ```
@@ -204,25 +209,25 @@ Tip: if you see something like "/<your name/>" you are usually supposed to chang
 
 cat
 
-Exercise 2.4 find out what cat can do by summoning the user manual, and experiment with it a bit
+Exercise 8.2 Find out what cat can do by summoning the user manual, and experiment with it a bit
 ```
 man cat
 cat copy_this_file.txt
 cat copy_this_file.txt <your name>_copy.txt
 ```
 
+### Even more most used commands:
 tar, gzip, unzip
-
 more, less, most
 
-Exercise 2.5 lets find out what happens when you look in some other files: feel free to also test with cat, more and most
+Exercise 9.1 lets find out what happens when you look in some other files: feel free to also test with cat, more and most
 ```
 less <file we copied>
 ```
 Q: Why would it make sense to use "cat" for some files, and something like "less" for other files?
 
 head, tail
-Exercise 2.6 modify the head command to print only the first five lines of the text
+Exercise 9.2 modify the head command to print only the first five lines of the text
 ```
 head <file>
 ```
