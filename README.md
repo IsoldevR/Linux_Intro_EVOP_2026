@@ -6,15 +6,18 @@ Please find the slides <placeholder>
 Remember, being able to code is a super power!
 
 ## Welcome
+Explainer:
 Please set up your work station such that you are comfortable - and make sure to keep it tidy!!
 
 ## Logistics of the course
+Explainer:
 - Introducing the TA's
 - We use: Post-Its!!
 - Set up and log into the desktop (you have a paper?)
 
 ## Introduction of Unix & Terminal
 ### Philosophy of Unix
+Explainer: 
 The bare bones - we need heavy computation to work as efficiently as possible.
 The output of one command gets used in the next.
 
@@ -47,11 +50,13 @@ USE YOUR STICKY NOTES TO SHOW WHEN YOU ARE DONE!
 
 
 ### Several types of server
+Explainer:
 - Cloud server
 - Server/cluster manager
 - A server manager
 
 ### Nodes, CPU's & Memory
+Explainer:
 - what are nodes?
 - what are CPU's?
 - what is "the memory"?
@@ -307,12 +312,14 @@ awk '$4 < 10' E10_Sample_1_mosdepth_summary.txt | less
 ## Moving from commands to scripts
 
 ### Editing a file
+Explainer:
 - nano
 - vim
 - vi
 - emacs
 
 ### A script
+Explainer:
 - basic elements
 - annotation of a script
 - good practices
@@ -351,6 +358,7 @@ echo "done!"
 ```
 
 ### More concepts
+Explainer:
 - a loop
 - an array
 
@@ -365,11 +373,12 @@ echo "done!"
 ```
   
 ## The Advanced Stuff (just so you know)
+Explainer:
 - add managing environments/conda?
 - pipelines / snakemake / ?
 - add containers / images / etc.?
 
-#### More extra exercises !
+#### Extra exercises !
 Can you disect this command, and find out what it will do?
 ```
 bcftools query -i'QUAL>20 && DP>10 && F_MISSING<0.5 && MAF>0.01' -f'%CHROM %POS %QUAL %DP\n' calls_60.bcf | head
