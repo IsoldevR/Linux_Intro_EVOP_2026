@@ -39,10 +39,21 @@ ssh # put here the log + -C
 ```
 
 ### Connectivity
-Using a screen
+Using a screen to maintain a program running on the server
 ```
-(+ Exercise) ## is it installed?
+screen -S testing_a_screen
 ```
+Use ctrl + a + d to detach
+
+See if you can list the screens you have available
+```
+screen -ls
+```
+Now you can re-attach to the screen:
+```
+screen -r testign_a_screen
+```
+
 
 ### Nodes, CPU's & Memory
 Login node vs. computational node
