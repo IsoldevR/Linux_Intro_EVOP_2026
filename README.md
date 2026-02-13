@@ -106,9 +106,7 @@ Interactive node
 srun -N 1 -c 4 --mem-per-cpu=4G -t 08:00:00 --pty bash 
 ```
 
-We will take a break now!
-
-### Files & folders (+ Exercise)
+### Files & folders
 - moving files between local <> server
 - what is the folder structure?
 - the expences
@@ -288,10 +286,13 @@ grep "MH893761.1" E10_*.txt > mito_depth.txt
 ```
 Tip: use a wildcard!
 
-Exercise 12.2 Make an overview of contigs that had a high amount of reads mapping to them for both samples
+Exercise 12.2 See which contigs have a read depth below ten, and pipe the result into another program to be able to scroll through the results
 ```
-awk '$4 > 10 {print $1, $4, $5, $6}' E10_Sample_1_mosdepth_summary.txt 
+awk '$4 < 10' E10_Sample_1_mosdepth_summary.txt | less
 ```
+
+## Lunch break!
+
 
 ## Moving from commands to scripts
 
