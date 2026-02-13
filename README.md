@@ -323,6 +323,30 @@ awk '$4 < 10' E10_Sample_1_mosdepth_summary.txt | less
 
 ## Moving from commands to scripts
 
+### Regular expressions & some repeating
+*Explainer*: 
+- what can you use them for?
+
+**Exercise 13.1** Find out which contigs have a read depth between 1 and 5 in Sample 1.
+```
+awk '$4 > 1 && $4 < 5 {print $1}' E10_Sample_1_mosdepth_summary.txt 
+```
+
+**Exercise 13.2** Find out which of the above contigs have a length longer than 10 million bp.
+```
+awk '$4 > 1 && $4 < 5 && $2 > 10000000 {print $1}' E10_Sample_1_mosdepth_summary.txt 
+```
+
+**Exercise 13.3** Find out if there are contigs with that length (longer than 10 million bp) but they don't have the read depth. 
+Tips: 
+1. It is nice to see the other columns now too
+2. There are multiple ways to solve this so go ahead and experiment!
+
+```
+awk '$4 > 1 && $4 < 5 | $2 > 10000000 {print $1 $2 $3 $4 $5}' E10_Sample_1_mosdepth_summary.txt 
+```
+
+
 ### Editing a file
 *Explainer*:
 - nano
@@ -338,12 +362,12 @@ awk '$4 < 10' E10_Sample_1_mosdepth_summary.txt | less
 
 We are ready to write our first script, lets' make a new file on the server!
 
-**Exercise 13.1** Go to the folder you made for today "Intro_Unix", and in that directory, make a new file named "my_first_script.sh"
+**Exercise 14.1** Go to the folder you made for today "Intro_Unix", and in that directory, make a new file named "my_first_script.sh"
 ```
 nano my_first_script.sh
 ```
 
-**Exercise 13.2** now type in the first bash line that is needed, a comment to let your future self know what this script is going to do, and use the "echo" command to let the script return a message to the terminal.
+**Exercise 14.2** now type in the first bash line that is needed, a comment to let your future self know what this script is going to do, and use the "echo" command to let the script return a message to the terminal.
 ```
 #!/bin/bash
 #This is a comment to remind myself that echo is a command to print something to the terminal
@@ -354,7 +378,7 @@ And of course: execute the script!!
 bash my_first_script.sh
 ```
 
-**Exercise 13.3** Make a new script that concatenates the output of searching for the gene "MH893761" in two files into one, and it should let you know when it is done. 
+**Exercise 14.3** Make a new script that concatenates the output of searching for the gene "MH893761" in two files into one, and it should let you know when it is done. 
 
 
 ```
@@ -366,7 +390,7 @@ grep "MH893761.1" E10_*.txt > mito_depth.txt
 echo "done!"
 ```
 
-**Exercise 13.3+** Adapt your script find_MH893761.sh to calculate and output the percentage covered by deviding the number of bases by the length of the contig for each sample.
+**Exercise 14.3+** Adapt your script find_MH893761.sh to calculate and output the percentage covered by deviding the number of bases by the length of the contig for each sample.
 
 
 ```
@@ -385,7 +409,7 @@ echo "done!"
 - a loop
 - an array
 
-**Exercise 14** Write a new script that loops through all files in the directory mosdepth_files to grep for the mitogenome "MH893761" and concatenate the results in a new file.
+**Exercise 15** Write a new script that loops through all files in the directory mosdepth_files to grep for the mitogenome "MH893761" and concatenate the results in a new file.
 
 
 Tips:
@@ -403,8 +427,6 @@ grep "MH893761.1" $file >> mito_depth_all.txt
 done
 echo "done!"
 ```
-
-### Regular expressions
 
 
 ## Let's have a coffee break!
