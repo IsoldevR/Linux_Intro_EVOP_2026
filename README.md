@@ -222,7 +222,7 @@ cd ~
 ### More most used commands:
 *Explainer*: mv, cp (scp), rm, get
 
-**Exercise 8.1** Make a copy of a file and name it "<your name>_copy.txt" ## NOTE: Get may need to be installed, not in cheat sheet
+**Exercise 8.1** Make a copy of a file and name it "/<your name/>_copy.txt" 
 ```
 cp E8_copy_this_file.txt <your name>_copy.txt
 ```
