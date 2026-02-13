@@ -18,7 +18,7 @@ Please set up your work station such that you are comfortable - and make sure to
 The bare bones - we need heavy computation to work as efficiently as possible.
 The output of one command gets used in the next.
 
-### Loggin onto the computer
+### Logging in to the computer
 Use your paper to follow the instructions to log into your local computer
 
 ### Several types of server
@@ -32,7 +32,7 @@ Use your paper to follow the instructions to log into your local computer
 - what is "the memory"?
 - login node vs. computational node
 
-### Logging onto the server (remote)
+### Logging in to the server (remote)
 Use your paper to follow the instructions to log onto the server
 ```
 ssh # put here the log + -C
