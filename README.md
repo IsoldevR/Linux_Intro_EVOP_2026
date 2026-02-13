@@ -208,28 +208,58 @@ The follwoing exercises we will do on the server!
 </details>
 
 **Exercise 7.2** Which parameter can be used for ls to sort files by size?
-```
-man ls
-ls -S
-```
-Tip: there are instructions to navigate the man page highlighted in the bottom of your terminal when the man page is open!
+
+<details>
+<summary>Show Tip</summary>
+
+  Tip: there are instructions to navigate the man page highlighted in the bottom of your terminal when the man page is open!
+</details>
+
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  man ls
+  ls -S
+  ```
+
+</details>
 
 **Exercise 7.3** We're going some places now! You can use cd to go to the home directory (~) and one level up (../) .. make sure to keep reading this exercise until you are on safe ground again!
-```
-cd ~
-cd ../
-```
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  cd ~
+  cd ../
+  ```
+
+</details>
 
 **Exercise 7.4** If you ran these commands you should be ... one folder up from your home directory? Where is that?
-```
-ls
-pwd
-```
+
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  ls
+  pwd
+  ```
+
+</details>
 
 **Exercise 7.5** AAAAHHH!! We are now somewhere where we're not supposed to be ... We don't want to break into other peoples data! Where is our own data? ... How do we solve this? PANIC!!!!
-```
-cd ~
-```
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  cd ~
+  ```
+
+</details>
+
 ... now we're back in our home folder ! Saved ourselves! Go back into the folder you made with mkdir to find back the files that we need for the next exercise.
 
 
@@ -237,45 +267,75 @@ cd ~
 *Explainer*: mv, cp (scp), rm, get
 
 **Exercise 8.1** Make a copy of a file and name it "/<your name/>_copy.txt" 
-```
-cp E8_copy_this_file.txt <your name>_copy.txt
-```
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  cp E8_copy_this_file.txt <your name>_copy.txt
+  ```
+
+</details>
+
 Tip: if you see something like "/<your name/>" you are usually supposed to change that bit including the angle brackets to something else!
 
 *Explainer*: cat
 
 **Exercise 8.2** Find out what cat can do by summoning the user manual, and experiment with it a bit
-```
-man cat
-cat copy_this_file.txt
-cat copy_this_file.txt <your name>_copy.txt
-```
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  man cat
+  cat copy_this_file.txt
+  cat copy_this_file.txt <your name>_copy.txt
+  ```
+
+</details>
 
 ### Even more "most used" commands:
 *Explainer*: tar, gzip, unzip
 *Explainer*: more, less, most
 
 **Exercise 9.1** Lets find out what happens when you look into the file for this exercise
-```
-less E9_fastp_wgs.out
-```
-Tip: you can scroll up and down using your arrow keys - the cat command doesn't allow this scrolling!
 
-head, tail
+<details>
+<summary>Show answer</summary>
+
+  ```
+  less E9_fastp_wgs.out
+  ```
+</details>
+
+Tip: you can scroll up and down using your arrow keys - the cat command doesn't allow this!
+
+*Explainer*: head, tail
 
 **Exercise 9.2** Modify the head command to print only the first five lines of the text
-```
-head E9_fastp_wgs.out
 
-man head
+<details>
+<summary>Show answer</summary>
 
-head -n 5 E9_fastp_wgs.out
-```
+  ```
+  head E9_fastp_wgs.out
+  man head 
+  head -n 5 E9_fastp_wgs.out
+  ```
 
-**Exercise 9.3** Now check the tail of the file ... see if this .out report shows if this computation worked correctly!
-```
-tail E9_fastp_wgs.out
-```
+</details>
+
+**Exercise 9.3** Now check the end of the file ... see if this .out report shows if this computation worked correctly!
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  tail E9_fastp_wgs.out
+  ```
+
+</details>
+
 Aww ... that is so sad ... there is an error! 
 Q: Any idea what happened to this poor scientist?
 
@@ -289,31 +349,62 @@ clear
 *Explainer*: grep
 
 **Exercise 10** First, see what there actually is in this file by your tool of choice. Then find in this file, any mentions of the mitogenome (MH893761.1)
-```
-less E10_Sample_1_mosdepth_summary.txt
-grep "MH893761.1" E10_Sample_1_mosdepth_summary.txt
-```
 
-**Exercise 10+** If you are having a very easy time following this tutorial so far, try piping the output into "head" to display the first 20 occurences. We are going to discuss pipes soon! 
+<details>
+<summary>Show answer</summary>
+
+  ```
+  less E10_Sample_1_mosdepth_summary.txt
+  grep "MH893761.1" E10_Sample_1_mosdepth_summary.txt
+  ```
+
+</details>
+
+**Exercise 10+** If you are having a very easy time following this tutorial so far, try piping the output of Exercise 10 into "head" to display the first 20 occurences. We are going to discuss pipes soon! 
+
+<details>
+<summary>Show answer</summary>
+
+  Mehehe there is no answer here! if you don't know how to do this - you will need to pay attention soon!
+  
+</details>
+
+
 
 ### Searching in files; advanced
 *Explainer*: awk
 
 **Exercise 11** Although grep allows to print the line where you found your mitogenome, sometimes you would like to only print a couple of columns, or do calculations with them. Try printing only the mean, max, and minimum depth of the reads from this sample to the mitogenome.
-```
-awk '$1 == "MH893761.1" {print $1, $4, $5, $6}' E10_Sample_1_mosdepth_summary.txt 
-```
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  awk '$1 == "MH893761.1" {print $1, $4, $5, $6}' E10_Sample_1_mosdepth_summary.txt 
+  ```
+
+</details>details>
 
 **Exercise 11+** You may be interested in any contigs (chrom) that have a depth higher than ten reads. For example, when you are worried about duplicated regions in your genome. Use awk to filter the file!
-```
-awk '$4 > 10 {print $1, $4, $5, $6}' E10_Sample_1_mosdepth_summary.txt 
-```
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  awk '$4 > 10 {print $1, $4, $5, $6}' E10_Sample_1_mosdepth_summary.txt 
+  ```
+</details>
 
 **Exercise 11++** Hm, maybe we are worried about these regions which get a lot of reads aligned. Let's make a list of chromosomes to exclude from our next analysis. You will again need a pipe!
-```
-awk '$4 > 10 {print $1}' E10_Sample_1_mosdepth_summary.txt > contig_10_depth.txt
-less contig_10_depth.txt
-```
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  awk '$4 > 10 {print $1}' E10_Sample_1_mosdepth_summary.txt > contig_10_depth.txt
+  less contig_10_depth.txt
+  ```
+</details>
 
 ### Working on zipped files
 *Explainer*: zcat etc.
@@ -322,15 +413,34 @@ less contig_10_depth.txt
 *Explainer*: pipes
 
 **Exercise 12.1** Get the depth statistics of the reads mapping to the mitogenome, and make a new file out of it.
-```
-grep "MH893761.1" E10_*.txt > mito_depth.txt
-```
-Tip: use a wildcard!
+
+<details>
+<summary>Show tip</summary>
+
+  Tip: use a wildcard!
+  
+</details>
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  grep "MH893761.1" E10_*.txt > mito_depth.txt
+  ```
+
+</details>
 
 **Exercise 12.2** See which contigs have a read depth below ten, and pipe the result into another program to be able to scroll through the results
-```
-awk '$4 < 10' E10_Sample_1_mosdepth_summary.txt | less
-```
+
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  awk '$4 < 10' E10_Sample_1_mosdepth_summary.txt | less
+  ```
+
+</details>
+
 
 ## Lunch break!
 
@@ -342,23 +452,50 @@ awk '$4 < 10' E10_Sample_1_mosdepth_summary.txt | less
 - what can you use them for?
 
 **Exercise 13.1** Find out which contigs have a read depth between 1 and 5 in Sample 1.
-```
-awk '$4 > 1 && $4 < 5 {print $1}' E10_Sample_1_mosdepth_summary.txt 
-```
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  awk '$4 > 1 && $4 < 5 {print $1}' E10_Sample_1_mosdepth_summary.txt 
+  ```
+
+</details>
+
 
 **Exercise 13.2** Find out which of the above contigs have a length longer than 10 million bp.
-```
-awk '$4 > 1 && $4 < 5 && $2 > 10000000 {print $1}' E10_Sample_1_mosdepth_summary.txt 
-```
+
+<details>
+<summary>Show answer</summary>
+
+  ```
+  awk '$4 > 1 && $4 < 5 && $2 > 10000000 {print $1}' E10_Sample_1_mosdepth_summary.txt 
+  ```
+
+</details>
+
 
 **Exercise 13.3** Filter out only the completely assembled "chromosomes" (they are at the top of the file and their names start with "NC"), and mitogenome (that "chromosome" name we saw before; it is MH893761.1)
-Tips: 
-1. It is nice to see the other columns now too
-2. There are multiple ways to solve this so go ahead and experiment!
 
-```
-awk '$1 ~ /NC/ || $1 ~ /MH/ {print}' E10_Sample_1_mosdepth_summary.txt
-```
+<details>
+<summary>Show tips</summary>
+  
+  Tips: 
+  1. It is nice to see the other columns now too
+  2. There are multiple ways to solve this so go ahead and experiment!
+  
+</details>
+
+
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  awk '$1 ~ /NC/ || $1 ~ /MH/ {print}' E10_Sample_1_mosdepth_summary.txt
+  ```
+
+</details>
+
 
 ### Editing a file
 *Explainer*:
@@ -376,44 +513,74 @@ awk '$1 ~ /NC/ || $1 ~ /MH/ {print}' E10_Sample_1_mosdepth_summary.txt
 We are ready to write our first script, lets' make a new file on the server!
 
 **Exercise 14.1** Go to the folder you made for today "Intro_Unix", and in that directory, make a new file named "my_first_script.sh"
-```
-nano my_first_script.sh
-```
+
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  nano my_first_script.sh
+  ```
+
+</details>
+
 
 **Exercise 14.2** now type in the first bash line that is needed, a comment to let your future self know what this script is going to do, and use the "echo" command to let the script return a message to the terminal.
-```
-#!/bin/bash
-#This is a comment to remind myself that echo is a command to print something to the terminal
-echo "WOW! You start looking like a super hero!"
-```
+
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  #!/bin/bash
+  #This is a comment to remind myself that echo is a command to print something to the terminal
+  echo "WOW! You start looking like a super hero!"
+  ```
+
+</details>
+
 And of course: execute the script!!
-```
-bash my_first_script.sh
-```
+
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  bash my_first_script.sh
+  ```
+
+</details>
+
 
 **Exercise 14.3** Make a new script that concatenates the output of searching for the gene "MH893761" in two files into one, and it should let you know when it is done. 
 
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  nano find_MH893761.sh
 
+  #!/bin/bash
+  # this is to find MH893761 in multiple lines and save it into a new file, mito_depth.txt
+  grep "MH893761.1" E10_*.txt > mito_depth.txt
+  echo "done!"
 ```
-nano find_MH893761.sh
 
-#!/bin/bash
-# this is to find MH893761 in multiple lines and save it into a new file, mito_depth.txt
-grep "MH893761.1" E10_*.txt > mito_depth.txt
-echo "done!"
-```
+</details>
 
 **Exercise 14.3+** Adapt your script find_MH893761.sh to calculate and output the percentage covered by deviding the number of bases by the length of the contig for each sample.
 
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  nano find_MH893761.sh
 
-```
-nano find_MH893761.sh
+  #!/bin/bash
+  # this is to find MH893761 in multiple lines and save it into a new file, mito_depth.txt
+  grep "MH893761.1" E10_*.txt | awk '{print $3/$2}'
+  echo "done!"
+  ```
 
-#!/bin/bash
-# this is to find MH893761 in multiple lines and save it into a new file, mito_depth.txt
-grep "MH893761.1" E10_*.txt | awk '{print $3/$2}'
-echo "done!"
-```
+</details>
+
 
 ## Let's have a coffee break!
 
@@ -424,23 +591,31 @@ echo "done!"
 
 **Exercise 15** Write a new script that loops through all files in the directory mosdepth_files to grep for the mitogenome "MH893761" and concatenate the results in a new file.
 
+<details>
+<summary>Show tips</summary>
+  
+  Tips:
+  1. Make sure the script knows where to find the files
+  2. Make use of a wildcard, but be specific enough that you don't incorporate any other files in the loop than the summaries
+  3. Make sure to not overwrite the output for each file in the loop (you should have a line in the output file for each of your input files)
 
-Tips:
-1. Make sure the script knows where to find the files
-2. Make use of a wildcard, but be specific enough that you don't incorporate any other files in the loop than the summaries
-3. Make sure to not overwrite the output for each file in the loop (you should have a line in the output file for each of your input files)
+</details>
 
 
-```
-#!/bin/bash
-#This script loops through the files and concatenates the output of searching for the mitogenome "MH893761" into one file
-for file in *_summary.txt;
-do
-grep "MH893761.1" $file >> mito_depth_all.txt
-done
-echo "Hurray! I see a new super hero has joined the coding forces!"
-```
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  #!/bin/bash
+  #This script loops through the files and concatenates the output of searching for the mitogenome "MH893761" into one file
+  for file in *_summary.txt;
+  do
+  grep "MH893761.1" $file >> mito_depth_all.txt
+  done
+  echo "Hurray! I see a new super hero has joined the coding forces!"
+  ```
 
+</details>
 
 ## Let's have a coffee break!
 
@@ -452,6 +627,7 @@ echo "Hurray! I see a new super hero has joined the coding forces!"
 
 # Extra exercises !
 **Exercise x** Working on the server, can you dissect this command, and find out what it will do? You can also try and execute it! Or change it ...!
+
 ```
 bcftools query -i'QUAL>20 && DP>10 && F_MISSING<0.5 && MAF>0.01' -f'%CHROM %POS %QUAL %DP\n' calls_10.bcf | head
 ```
