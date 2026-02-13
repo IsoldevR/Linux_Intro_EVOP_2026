@@ -337,15 +337,14 @@ awk '$4 > 1 && $4 < 5 {print $1}' E10_Sample_1_mosdepth_summary.txt
 awk '$4 > 1 && $4 < 5 && $2 > 10000000 {print $1}' E10_Sample_1_mosdepth_summary.txt 
 ```
 
-**Exercise 13.3** Find out if there are contigs with that length (longer than 10 million bp) but they don't have the read depth. 
+**Exercise 13.3** Filter out only the completely assembled "chromosomes" (they are at the top of the file and their names start with "NC"), and mitogenome (that "chromosome" name we saw before; it is MH893761.1)
 Tips: 
 1. It is nice to see the other columns now too
 2. There are multiple ways to solve this so go ahead and experiment!
 
 ```
-awk '$4 > 1 && $4 < 5 | $2 > 10000000 {print $1 $2 $3 $4 $5}' E10_Sample_1_mosdepth_summary.txt 
+awk '$1 ~ /NC/ || $1 ~ /MH/ {print}' E10_Sample_1_mosdepth_summary.txt
 ```
-
 
 ### Editing a file
 *Explainer*:
@@ -425,7 +424,7 @@ for file in *_summary.txt;
 do
 grep "MH893761.1" $file >> mito_depth_all.txt
 done
-echo "done!"
+echo "Hurray! I see a new super hero has joined the coding forces!"
 ```
 
 
