@@ -146,7 +146,7 @@ Tip: this has to be run on your local machine !
 <details>
 <summary>Show answer</summary>
 ```
-<same command as above>
+<same /command as above>
 ```
 </details>
   
