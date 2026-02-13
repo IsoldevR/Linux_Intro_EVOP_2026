@@ -21,6 +21,31 @@ The output of one command gets used in the next.
 ### Logging in to the computer
 Use your paper to follow the instructions to log into your local computer
 
+USE YOUR STICKY NOTES TO SHOW WHEN YOU ARE DONE!
+
+### Explore the local computer
+Click some things, then open the terminal
+
+In the open terminal, we are going to see the file structure by:
+```
+ls
+```
+Then go to the folder xxx
+```
+cd xxx
+```
+Then make a new directory
+```
+mkdir Intro_linux
+```
+Go into the directory
+```
+cd Intro_linux
+```
+
+USE YOUR STICKY NOTES TO SHOW WHEN YOU ARE DONE!
+
+
 ### Several types of server
 - Cloud server
 - Server/cluster manager
@@ -51,9 +76,9 @@ screen -ls
 ```
 Now you can re-attach to the screen:
 ```
-screen -r testign_a_screen
+screen -r testing_a_screen
 ```
-
+Tip: you can use your TAB key again to finish the name of the screen
 
 ### Nodes, CPU's & Memory
 Login node vs. computational node
@@ -63,16 +88,21 @@ Interactive node
 srun -N 1 -c 4 --mem-per-cpu=4G -t 08:00:00 --pty bash 
 ```
 
+We will take a break now!
+
 ### Files & folders (+ Exercise)
 - moving files between local <> server
 - what is the folder structure?
 - the expences
 - what can we do about that? (zip & remove)
 
+The following exercises are done on the local machine!
+
 Exercise 1.1 download the slides to your local machine
 ```
 ssh ... # make correct command here
 ```
+Tip: this has to be run on your local machine !
 
 ### Tricks
 Wildcards
@@ -81,15 +111,18 @@ Exercise 1.2 download all pdf files, by replacing the file name in the previous 
 ```
 <same command as above>
 ```
-Using keys (?)
+
+Using keys:
+Ctrl + C (cancel)
 The magic "tab"
+And the command "clear"
 
 Exercise 1.3 download the slides to your local machine again, this time use the magic "tab"
 ```
 <same command as above but without the path finished>
 ```
 
-Exercise 1.4 if your connection to the server doesn't work for some reasong; you can download the files to your computer directly:
+Exercise 1.4 if your connection to the server doesn't work for some reason; you can download the files to your computer directly:
 ```
 wget https://github.com/IsoldevR/Linux_Intro_EVOP_2026/master.zip
 unzip master.zip
@@ -114,6 +147,8 @@ Exercise 1.4 See if you can identify what the following command is doing:
 ### The most used commands
 pwd, cd, ls
 
+The follwoing exercises we will do on the server!
+
 Exercise 2.1 go to the folder from which we downloaded the pdf with the slides using cd, and see what files are there
 ```
 cd <file path>
@@ -121,31 +156,49 @@ ls
 ```
 Exercise 2.2 which parameter can be used for ls to sort files by size?
 
+```
+man ls
+ls -S
+```
+Tip: there are instructions to navigate the man page highlighted in the bottom of your terminal when the man page is open!
+
 mv, cp (scp), rm, get
 
 Exercise 2.3 make a copy of a file and name it "<your name>_copy.txt" ## NOTE: Get may need to be installed, not in cheat sheet
 ```
-cp <file to be made>.txt <your name>_copy.txt
+cp copy_this_file.txt <your name>_copy.txt
 ```
+Tip: if you see something like "<your name>" you are usually supposed to change that bit including the angle brackets to something else!
 
 cat
-Exercise 2.4 find out what cat can do by summoning the user manual
+
+Exercise 2.4 find out what cat can do by summoning the user manual, and experiment with it a bit
 ```
 man cat
+cat copy_this_file.txt
+cat copy_this_file.txt <your name>_copy.txt
 ```
+
 tar, gzip, unzip
 
 more, less, most
 
-Exercise 2.5 lets find out what was actually in that file that you made a copy of: feel free to also test more and most
+Exercise 2.5 lets find out what happens when you look in some other files: feel free to also test with cat, more and most
 ```
 less <file we copied>
 ```
+Q: Why would it make sense to use "cat" for some files, and something like "less" for other files?
 
 head, tail
 Exercise 2.6 modify the head command to print only the first five lines of the text
 ```
 head <file>
+```
+
+clear, exit
+```
+clear
+exit
 ```
 
 grep
