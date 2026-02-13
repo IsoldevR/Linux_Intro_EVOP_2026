@@ -143,7 +143,8 @@ Exercise 5.1 download all pdf files, by replacing the file name in the previous 
 Using keys:
 Ctrl + C (cancel)
 The magic "tab"
-And the command "clear"
+The command "history"
+The command "clear"
 
 Exercise 5.2 download the slides to your local machine again, this time use the magic "tab"
 ```
@@ -362,21 +363,37 @@ grep "MH893761.1" E10_*.txt | awk '{print $3/$2}'
 echo "done!"
 ```
 
+## Let's have a coffee break!
+
 ### More concepts
 Explainer:
 - a loop
 - an array
 
-Exercise 14 write a script that loops through all files in the directory xx to grep for gene "xx" and concatenate the results in a new file
+Exercise 14 Write a new script that loops through all files in the directory mosdepth_files to grep for the mitogenome "MH893761" and concatenate the results in a new file.
+
+
+Tips:
+1. Make sure the script knows where to find the files
+2. Make use of a wildcard, but be specific enough that you don't incorporate any other files in the loop than the summaries
+3. Make sure to not overwrite the output for each file in the loop (you should have a line in the output file for each of your input files)
+
+
 ```
 #!/bin/bash
-# This script loops concatenates the output of searching for the gene "xx" in two files into one
-for file in *_output.txt; do
-grep <pattern> file | cat pattern.txt > pattern.txt
+#This script loops through the files and concatenates the output of searching for the mitogenome "MH893761" into one file
+for file in *_summary.txt;
+do
+grep "MH893761.1" $file >> mito_depth_all.txt
 done
 echo "done!"
 ```
-  
+
+### Regular expressions
+
+
+## Let's have a coffee break!
+
 ## The Advanced Stuff (just so you know)
 Explainer:
 - add managing environments/conda?
