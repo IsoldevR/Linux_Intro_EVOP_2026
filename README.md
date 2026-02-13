@@ -194,14 +194,17 @@ If that was not where you thought you were, try to correct your mistake or call 
 *Explainer*: pwd, cd, ls
 
 The follwoing exercises we will do on the server!
+
 **Exercise 7.1** Go to the folder from which we downloaded the pdf with the slides using cd, and see what files are there
 
 <details>
 <summary>Show answer</summary>
+
   ```
   cd <file /path>
   ls
   ```
+
 </details>
 
 **Exercise 7.2** Which parameter can be used for ls to sort files by size?
