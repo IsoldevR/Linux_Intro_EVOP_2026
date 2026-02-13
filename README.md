@@ -143,6 +143,8 @@ Tip: this has to be run on your local machine !
 *Explainer*: Wildcards
 
 **Exercise 5.1** Download all pdf files, by replacing the file name in the previous command with one of the discussed wildcards:
+<details>
+<summary>Show answer</summary>
 ```
 <same command as above>
 ```
