@@ -13,16 +13,13 @@ Please set up your work station such that you are comfortable - and make sure to
 - We use: Post-Its!!
 - Set up and log into the desktop (you have a paper?)
 
-## Introduciton of Unix & Terminal
+## Introduction of Unix & Terminal
 ### Philosophy of Unix
 The bare bones - we need heavy computation to work as efficiently as possible.
 The output of one command gets used in the next.
 
-### Loggin onto this server
-<placeholder for instructions to log into the server>
-```
-ssh <your user name>@<server>
-```
+### Loggin onto the computer
+Use your paper to follow the instructions to log into your local computer
 
 ### Several types of server
 - Cloud server
@@ -34,6 +31,12 @@ ssh <your user name>@<server>
 - what are CPU's?
 - what is "the memory"?
 - login node vs. computational node
+
+### Logging onto the server (remote)
+Use your paper to follow the instructions to log onto the server
+```
+ssh # put here the log + -C
+```
 
 ### Connectivity
 Using a screen
