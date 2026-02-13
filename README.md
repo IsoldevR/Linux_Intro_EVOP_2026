@@ -216,28 +216,42 @@ cat copy_this_file.txt
 cat copy_this_file.txt <your name>_copy.txt
 ```
 
-### Even more most used commands:
+### Even more "most used" commands:
 tar, gzip, unzip
 more, less, most
 
-Exercise 9.1 lets find out what happens when you look in some other files: feel free to also test with cat, more and most
+Exercise 9.1 Lets find out what happens when you look into the file for this exercise
 ```
-less <file we copied>
+less E9_fastp_wgs.out
 ```
-Q: Why would it make sense to use "cat" for some files, and something like "less" for other files?
+Tip: you can scroll up and down using your arrow keys - the cat command doesn't allow this scrolling!
 
 head, tail
-Exercise 9.2 modify the head command to print only the first five lines of the text
+
+Exercise 9.2 Modify the head command to print only the first five lines of the text
 ```
-head <file>
+head E9_fastp_wgs.out
+
+man head
+
+head -n 5 E9_fastp_wgs.out
 ```
 
+Exercise 9.3 Now check the tail of the file ... see if this .out report shows if this computation worked correctly!
+```
+tail E9_fastp_wgs.out
+```
+Q: Aww ... that is so sad ... there is an error! Any idea what happened to this poor scientist?
+
 clear, exit
+
+Exercise 9.4 
 ```
 clear
 exit
 ```
 
+### Searching in files
 grep
 
 Exercise 2.7 find in this file, any mentions of some gene
