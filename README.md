@@ -64,6 +64,8 @@ ssh # put here the log + -C
 ```
 
 ### Connectivity
+Explainer: a screen can save your life
+
 Exercise 3 Using a screen to maintain a program running on the server
 ```
 screen -S testing_a_screen
@@ -98,15 +100,20 @@ screen -ls
 The response to this command will be a list of your active screen(s) with notes of (Detached) and (Attached). However, it will also show (Attached) if you are connected in another terminal. So then you can use ctrl + a + d to try and detach again in case you are still in your screen. And nothing will happen if you are not in the screen.
 
 ### Nodes, CPU's & Memory
+Explainer:
+Nodes
+CPU's
+Memory
 Login node vs. computational node
 
-Interactive node
+This is an example of an interactive node
 ```
 ## do not run this as it does not work on our machines / server
 srun -N 1 -c 4 --mem-per-cpu=4G -t 08:00:00 --pty bash 
 ```
 
 ### Files & folders
+Explainer:
 - moving files between local <> server
 - what is the folder structure?
 - the expences
@@ -121,7 +128,7 @@ ssh ... # make correct command here
 Tip: this has to be run on your local machine !
 
 ### Tricks
-Wildcards
+Explainer: Wildcards
 
 Exercise 5.1 download all pdf files, by replacing the file name in the previous command with one of the discussed wildcards:
 ```
@@ -151,6 +158,7 @@ pwd
 If that was not where you thought you were, try to correct your mistake or call a TA!
 
 ### Executing commands
+Explainer:
 - a command
 - command structure
 - where is the user manual?
@@ -160,8 +168,10 @@ Exercise 6 See if you can identify what the following command is doing:
 <same command as above but to upload> ## need to check if allowed
 ```
 
+### Lets' have a coffee break!
+
 ### The most used commands
-pwd, cd, ls
+Explainer pwd, cd, ls
 
 The follwoing exercises we will do on the server!
 Exercise 7 Go to the folder from which we downloaded the pdf with the slides using cd, and see what files are there
