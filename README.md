@@ -160,7 +160,6 @@ Exercise 1.5 See if you can identify what the following command is doing:
 pwd, cd, ls
 
 The follwoing exercises we will do on the server!
-
 Exercise 2.1 go to the folder from which we downloaded the pdf with the slides using cd, and see what files are there
 ```
 cd <file path>
@@ -174,31 +173,34 @@ ls -S
 ```
 Tip: there are instructions to navigate the man page highlighted in the bottom of your terminal when the man page is open!
 
-Exercise 2.3 We're going some places now! You can use cd to go to the home directory (~) and one level up (../) .. make sure to keep reading this one!
+Exercise 2.3 We're going some places now! You can use cd to go to the home directory (~) and one level up (../) .. make sure to keep reading this exercise until you are on safe ground again!
 ```
 cd ~
 cd ../
 ```
+
 If you ran these commands you should be ... one folder up from your home directory? Where is that?
 ```
 ls
 pwd
 ```
-AAAAHHH!! We are now somewhere where we're not supposed to be ... We don't want to break into other peoples data! Where is our own data? How do we solve this?
+
+AAAAHHH!! We are now somewhere where we're not supposed to be ... We don't want to break into other peoples data! Where is our own data? ... How do we solve this? PANIC!!!!
 ```
 cd ~
 ```
-... now we're back in our home folder ! Go back into the folder you made with mkdir to find back the files that we need for the next exercise.
+... now we're back in our home folder ! Saved ourselves! Go back into the folder you made with mkdir to find back the files that we need for the next exercise.
 
 
 
 mv, cp (scp), rm, get
 
+
 Exercise 2.3 make a copy of a file and name it "<your name>_copy.txt" ## NOTE: Get may need to be installed, not in cheat sheet
 ```
 cp copy_this_file.txt <your name>_copy.txt
 ```
-Tip: if you see something like "<your name>" you are usually supposed to change that bit including the angle brackets to something else!
+Tip: if you see something like "/<your name/>" you are usually supposed to change that bit including the angle brackets to something else!
 
 cat
 
