@@ -262,7 +262,8 @@ head -n 5 E9_fastp_wgs.out
 ```
 tail E9_fastp_wgs.out
 ```
-Q: Aww ... that is so sad ... there is an error! Any idea what happened to this poor scientist?
+Aww ... that is so sad ... there is an error! 
+Q: Any idea what happened to this poor scientist?
 
 *Explainer*: clear, exit
 
