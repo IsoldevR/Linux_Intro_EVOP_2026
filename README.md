@@ -342,15 +342,7 @@ And of course: execute the script!!
 bash my_first_script.sh
 ```
 
-Exercise 13.3 Make a new script that concatenates the output of searching for the gene "" in two files into one 
-```
-#!/bin/bash
-# This script concatenates the output of searching for the gene "xx" in two files into one
-grep <pattern> <file1> <file2> > <pattern>.txt
-echo "done!"
-```
-
-Exercise 13.4 Make a new script that concatenates the output of searching for the gene "MH893761" in two files into one, and it should let you know when it is done. 
+Exercise 13.3 Make a new script that concatenates the output of searching for the gene "MH893761" in two files into one, and it should let you know when it is done. 
 ```
 nano find_MH893761.sh
 
