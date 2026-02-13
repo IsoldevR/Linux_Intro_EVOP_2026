@@ -148,7 +148,8 @@ Tip: this has to be run on your local machine !
 ```
 <same command as above>
 ```
-
+</details>
+  
 *Explainer*: Using keys
 - Ctrl + C (cancel)
 - The magic "tab"
