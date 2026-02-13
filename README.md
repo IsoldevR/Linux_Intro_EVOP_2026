@@ -230,8 +230,8 @@ cat copy_this_file.txt <your name>_copy.txt
 ```
 
 ### Even more "most used" commands:
-tar, gzip, unzip
-more, less, most
+Explainer: tar, gzip, unzip
+Explainer: more, less, most
 
 Exercise 9.1 Lets find out what happens when you look into the file for this exercise
 ```
@@ -263,7 +263,7 @@ clear
 ```
 
 ### Searching in files
-grep
+Explainer: grep
 
 Exercise 10 First, see what there actually is in this file by your tool of choice. Then find in this file, any mentions of the mitogenome (MH893761.1)
 ```
@@ -273,7 +273,7 @@ grep "MH893761.1" E10_Sample_1_mosdepth_summary.txt
 Exercise 10+ If you are having a very easy time following this tutorial so far, try piping the output into "head" to display the first 20 occurences. We are going to discuss pipes soon! 
 
 ### Searching in files; advanced
-awk
+Explainer: awk
 
 Exercise 11 Although grep allows to print the line where you found your mitogenome, sometimes you would like to only print a couple of columns, or do calculations with them. Try printing only the mean, max, and minimum depth of the reads from this sample to the mitogenome.
 ```
@@ -290,10 +290,10 @@ less contig_10_depth.txt
 ```
 
 ### Working on zipped files
-zcat etc.
+Explainer: zcat etc.
 
 ### Piping
-pipes
+Explainer: pipes
 
 Exercise 12.1 Get the depth statistics of the reads mapping to the mitogenome, and make a new file out of it.
 ```
@@ -324,24 +324,25 @@ Explainer:
 - annotation of a script
 - good practices
 
-We are ready to write our first script, lets' make a new file in our favourite, own, home directory!
+We are ready to write our first script, lets' make a new file on the server!
 
-Exercise 5.1 go to your home directory, make a new directory named "intro_bash", and in that directory, make a new file named "my_first_script.sh"
+Exercise 13.1 Go to the folder you made for today "Intro_Unix", and in that directory, make a new file named "my_first_script.sh"
 ```
-cd ~
-mkdir intro_bash
 nano my_first_script.sh
 ```
 
-Exercise 5.2 now type in the first bash line that is needed, a comment to let your future self know what this script is going to do, and use the "echo" command to let the script return a message to the terminal.
+Exercise 13.2 now type in the first bash line that is needed, a comment to let your future self know what this script is going to do, and use the "echo" command to let the script return a message to the terminal.
 ```
 #!/bin/bash
-# This is a comment to remind myself that echo is a command to print something to the terminal
-echo "Hello, World!"
+#This is a comment to remind myself that echo is a command to print something to the terminal
+echo "WOW! You start looking like a super hero!"
 ```
 And of course: execute the script!!
+```
+bash my_first_script.sh
+```
 
-Exercise 5.2+ now make a new script that concatenates the output of searching for the gene "xx" in two files into one 
+Exercise 13.3 Make a new script that concatenates the output of searching for the gene "" in two files into one 
 ```
 #!/bin/bash
 # This script concatenates the output of searching for the gene "xx" in two files into one
@@ -349,11 +350,23 @@ grep <pattern> <file1> <file2> > <pattern>.txt
 echo "done!"
 ```
 
-Exercise 5.2++ now make a new script that concatenates the output of searching for the gene "xx" in two files into one 
+Exercise 13.4 Make a new script that concatenates the output of searching for the gene "MH893761" in two files into one, and it should let you know when it is done. 
 ```
+nano find_MH893761.sh
+
 #!/bin/bash
-# This script concatenates the output of searching for the gene "xx" in two files into one
-grep <pattern> <file1> <file2> > <pattern>.txt
+# this is to find MH893761 in multiple lines and save it into a new file, mito_depth.txt
+grep "MH893761.1" E10_*.txt > mito_depth.txt
+echo "done!"
+```
+
+Exercise 13.4+ Adapt your script find_MH893761.sh to calculate and output the percentage covered by deviding the number of bases by the length of the contig for each sample.
+```
+nano find_MH893761.sh
+
+#!/bin/bash
+# this is to find MH893761 in multiple lines and save it into a new file, mito_depth.txt
+grep "MH893761.1" E10_*.txt | awk '{print $3/$2}'
 echo "done!"
 ```
 
@@ -362,7 +375,7 @@ Explainer:
 - a loop
 - an array
 
-Exercise 6 write a script that loops through all files in the directory xx to grep for gene "xx" and concatenate the results in a new file
+Exercise 14 write a script that loops through all files in the directory xx to grep for gene "xx" and concatenate the results in a new file
 ```
 #!/bin/bash
 # This script loops concatenates the output of searching for the gene "xx" in two files into one
