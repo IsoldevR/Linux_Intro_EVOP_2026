@@ -36,11 +36,11 @@ cd xxx
 ```
 Then make a new directory
 ```
-mkdir Intro_linux
+mkdir Intro_Unix
 ```
 Go into the directory
 ```
-cd Intro_linux
+cd Intro_Unix
 ```
 
 USE YOUR STICKY NOTES TO SHOW WHEN YOU ARE DONE!
@@ -78,6 +78,18 @@ Now you can re-attach to the screen:
 ```
 screen -r testing_a_screen
 ```
+
+Now you can close this screen in two ways.
+1. If you are in the screen:
+```
+exit
+```
+
+2. If you are detached from the screen:
+```
+screen -X -S testing_a_screen kill
+```
+
 Tip: you can use your TAB key again to finish the name of the screen
 
 ### Nodes, CPU's & Memory
@@ -96,7 +108,7 @@ We will take a break now!
 - the expences
 - what can we do about that? (zip & remove)
 
-The following exercises are done on the local machine!
+The following exercises are done on the LOCAL machine!
 
 Exercise 1.1 download the slides to your local machine
 ```
@@ -122,13 +134,13 @@ Exercise 1.3 download the slides to your local machine again, this time use the 
 <same command as above but without the path finished>
 ```
 
-Exercise 1.4 if your connection to the server doesn't work for some reason; you can download the files to your computer directly:
+Exercise 1.4a if your connection to the server doesn't work for some reason; you can download the files to your computer directly:
 ```
 wget https://github.com/IsoldevR/Linux_Intro_EVOP_2026/master.zip
 unzip master.zip
 ```
 
-Just a check! Where were you when you downloaded these files?
+Exercise 1.4b Just a check! Where were you when you downloaded these files? Run the following command, and it should return to you the file path where you are:
 ```
 pwd
 ```
@@ -139,7 +151,7 @@ If that was not where you thought you were, try to correct your mistake or call 
 - command structure
 - where is the user manual?
 
-Exercise 1.4 See if you can identify what the following command is doing:
+Exercise 1.5 See if you can identify what the following command is doing:
 ```
 <same command as above but to upload> ## need to check if allowed
 ```
@@ -154,13 +166,31 @@ Exercise 2.1 go to the folder from which we downloaded the pdf with the slides u
 cd <file path>
 ls
 ```
-Exercise 2.2 which parameter can be used for ls to sort files by size?
 
+Exercise 2.2 which parameter can be used for ls to sort files by size?
 ```
 man ls
 ls -S
 ```
 Tip: there are instructions to navigate the man page highlighted in the bottom of your terminal when the man page is open!
+
+Exercise 2.3 We're going some places now! You can use cd to go to the home directory (~) and one level up (../) .. make sure to keep reading this one!
+```
+cd ~
+cd ../
+```
+If you ran these commands you should be ... one folder up from your home directory? Where is that?
+```
+ls
+pwd
+```
+AAAAHHH!! We are now somewhere where we're not supposed to be ... We don't want to break into other peoples data! Where is our own data? How do we solve this?
+```
+cd ~
+```
+... now we're back in our home folder ! Go back into the folder you made with mkdir to find back the files that we need for the next exercise.
+
+
 
 mv, cp (scp), rm, get
 
