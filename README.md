@@ -10,7 +10,7 @@ Please find the slides /<placeholder/>*
 Please set up your work station such that you are comfortable - and make sure to keep it tidy!!
 
 ## Logistics of the course
-Explainer:
+*Explainer*:
 - Introducing the TA's
 - We use: Post-Its!!
 - Set up and log into the desktop (you have a paper?)
