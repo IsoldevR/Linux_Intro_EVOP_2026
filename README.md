@@ -22,12 +22,12 @@ Scientific programmers - we need heavy computation to work as efficiently as pos
 The output of one command gets used in the next.
 
 ### Logging in to the computer
-**Exercise 0** Use the paper you received to follow the instructions to log into your local computer. If you get in trouble before, use a sticky note to get help.
+**Exercise 1.1** Use the paper you received to follow the instructions to log into your local computer. If you get in trouble before, use a sticky note to get help.
 
 **IF YOU ARE DONE: PLEASE USE YOUR STICKY NOTES TO SHOW US!**
 
 ### Explore the local computer
-**Exercise 1** Click some things like you do when you first have a new computer, then open the terminal. This exercise is done when you read something about a sticky note. If you get in trouble before, use a sticky note to get help.
+**Exercise 1.2** Click some things like you do when you first have a new computer, then open the terminal. This exercise is done when you read something about a sticky note. If you get in trouble before, use a sticky note to get help.
 
 In the open terminal, we are going to see the file structure by:
 ```
