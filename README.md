@@ -55,7 +55,6 @@ cd Intro_Unix
 *Explainer*:
 - Cloud server
 - Server/cluster manager
-- A server manager
 
 ### Nodes, CPU's & Memory
 *Explainer*:
@@ -63,6 +62,16 @@ cd Intro_Unix
 - what are CPU's?
 - what is "the memory"?
 - login node vs. computational node
+
+This is an example of an interactive session
+```
+## do not run this as it does not work on our machines / server
+srun -N 1 -c 4 --mem-per-cpu=4G -t 08:00:00 --pty bash 
+```
+It may take a while before an interactive session has started, it is best practise to do this in a screen, and it is nice to close it after you are done, so that others can use the resources again. Do so by typing executing:
+```
+exit
+```
 
 ### Logging in to the server (remote)
 **Exercise 2** Use your paper to follow the instructions to log onto the server
@@ -106,23 +115,6 @@ Just one more thing; what if you don't know whether you are in a screen or not?
 screen -ls
 ```
 The response to this command will be a list of your active screen(s) with notes of (Detached) and (Attached). However, it will also show (Attached) if you are connected in another terminal. So then you can use ctrl + a + d to try and detach again in case you are still in your screen. And nothing will happen if you are not in the screen.
-
-### Nodes, CPU's & Memory
-*Explainer*:
-Nodes
-CPU's
-Memory
-Login node vs. computational node
-
-This is an example of an interactive session
-```
-## do not run this as it does not work on our machines / server
-srun -N 1 -c 4 --mem-per-cpu=4G -t 08:00:00 --pty bash 
-```
-It may take a while before an interactive session has started, it is best practise to do this in a screen, and it is nice to close it after you are done, so that others can use the resources again. Do so by typing executing:
-```
-exit
-```
 
 ### Files & folders
 *Explainer*:
