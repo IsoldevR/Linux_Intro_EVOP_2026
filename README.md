@@ -269,7 +269,7 @@ The follwoing exercises we will do on the server!
 
 </details>
 
-Tip: if you see something like "<your name>" you are usually supposed to change that bit including the angle brackets to something else!
+Tip: if you see something like "your name" between the angle brackets, you are usually supposed to change that bit including the angle brackets to something else!
 
 *Explainer*: cat
 
