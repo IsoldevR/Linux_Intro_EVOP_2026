@@ -587,9 +587,10 @@ And of course: execute the script!!
 <summary>Show tips</summary>
   
   Tips:
-  1. Make sure the script knows where to find the files
-  2. Make use of a wildcard, but be specific enough that you don't incorporate any other files in the loop than the summaries
-  3. Make sure to not overwrite the output for each file in the loop (you should have a line in the output file for each of your input files)
+  1. Unzip the mosdepth_files folder with unzip, the easy way is to just do this yourself, the hard way is to include this in your script.
+  2. Make sure the script knows where to find the files
+  3. Make use of a wildcard, but be specific enough that you don't incorporate any other files in the loop than the summaries
+  4. Make sure to not overwrite the output for each file in the loop (you should have a line in the output file for each of your input files)
 
 </details>
 
@@ -618,8 +619,27 @@ And of course: execute the script!!
 - add containers / images / etc.?
 
 # Extra exercises !
-**Exercise x** Working on the server, can you dissect this command, and find out what it will do? You can also try and execute it! Or change it ...!
+**Exercise 16** Can you dissect this command, and find out what it will do? You can also try and execute it! Or change it ...!
 
 ```
 bcftools query -i'QUAL>20 && DP>10 && F_MISSING<0.5 && MAF>0.01' -f'%CHROM %POS %QUAL %DP\n' calls_10.bcf | head
 ```
+
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  Firstly, it does a bcftools (google to know what that is) search for SNPs with a quality over 40, and a read depth over 10, a amount of missing positions below 0.5, and a minor allele frequency over 0.01. Then, it returs the columns with the chromosome name, the position of the SNP, the quality of the SNP, and the depth of the SNP. It uses the "calls_10.bcf" file, and pipes the output into head. Some suggestions; 1) try piping into another file viewer program. 2) try removing or adding filters, 3) try changing the fields that are returned.
+  ```
+
+</details>
+
+**Exercise 17** Open the E17_fastqc.sh script and try to understand what the script does. Adapt the file locations, so you can run it!
+<details>
+<summary>Show answer</summary>
+  
+  ```
+  This script does a fastqc (google to know what that is) analysis for a set of reads. Some tips to make it work; 1) check whether the zipping program used in the script fits with the zipping type the files are in your directory.
+  ```
+
+</details>
