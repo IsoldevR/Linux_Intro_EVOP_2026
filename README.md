@@ -175,7 +175,7 @@ If that was not where you thought you were, try to correct your mistake or call 
 
 **Exercise 6** See if you can identify what the following command is doing:
 ```
-<same command as above but to upload> ## need to check if allowed
+scp -C E9_fastp_wgs.out k00457149@andorra.imp.fu-berlin.de:/home/mi/k00457149/Linux_Intro_EVOP_2026/
 ```
 
 ### Lets' have a coffee break!
