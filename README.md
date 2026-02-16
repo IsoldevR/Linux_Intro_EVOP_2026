@@ -64,7 +64,7 @@ exit
 ```
 
 ### Logging in to the server (remote)
-**Exercise 2** Use your paper to follow the instructions to log onto the server
+**Exercise 2** Use your paper to follow the instructions to log onto the server - **Exercise cancelled: this is only to be able to access the computers remotely!**
 
 Remember to use your own user name here!
 ```
@@ -121,11 +121,12 @@ The following exercises are done on the **LOCAL machine**!
 ```
 pwd
 # this should give you the local directory
-scp -r -C k00457149@andorra.imp.fu-berlin.de:/home/mi/k00457149/Linux_Intro_EVOP_2026 .
+rsync -r -z -a /srv/evop/software/Workshop_material/Linux_Intro_EVOP_2026 .
 ```
-Tip: this has to be run on your local machine !
--r tells the computer to download a fill directory
--C tells the computer to compress the files
+Explanation:
+-r tells the computer to download a complete directory
+-z tells the computer to compress the files
+-a preserves file permissions and time stamps
 
 ### Tricks
 *Explainer*: Wildcards
@@ -137,7 +138,7 @@ Tip: this has to be run on your local machine !
   
   ```
   cd Linux_Intro_EVOP_2026/
-  scp -C k00457149@andorra.imp.fu-berlin.de:/home/mi/k00457149/Linux_Intro_EVOP_2026/*.pdf .
+  rsync -z -a /srv/evop/software/Workshop_material/Linux_Intro_EVOP_2026/Linux_Intro_EVOP_2026/*.pdf .
   ```
 
 </details>
@@ -155,7 +156,7 @@ cd ~
 cd 
 ```
 
-**Exercise 5.3** Only if your connection to the server doesn't work for some reason; you can download the files to your computer directly:
+**Exercise 5.3** Only if your connection to the data drive doesn't work for some reason; you can download the files from Isolde's GitHub to your computer directly:
 ```
 git clone https://github.com/IsoldevR/Linux_Intro_EVOP_2026/master.zip
 ```
@@ -173,9 +174,9 @@ If that was not where you thought you were, try to correct your mistake or call 
 - command structure
 - where is the user manual?
 
-**Exercise 6** See if you can identify what the following command is doing:
+**Exercise 6** See if you can identify what the following command would do:
 ```
-scp -C E9_fastp_wgs.out k00457149@andorra.imp.fu-berlin.de:/home/mi/k00457149/Linux_Intro_EVOP_2026/
+rsync -z -a *.pdf /srv/evop/software/Workshop_material/Linux_Intro_EVOP_2026/Linux_Intro_EVOP_2026/
 ```
 
 ### Lets' have a coffee break!
