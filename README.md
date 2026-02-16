@@ -264,7 +264,7 @@ The follwoing exercises we will do on the server!
 <summary>Show answer</summary>
 
   ```
-  cp E8_copy_this_file.txt /<your name/>_copy.txt
+  cp E8_copy_this_file.txt <your name>_copy.txt
   ```
 
 </details>
