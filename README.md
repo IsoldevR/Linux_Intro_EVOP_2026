@@ -258,7 +258,7 @@ The follwoing exercises we will do on the server!
 ### More most used commands:
 *Explainer*: mv, cp (scp), rm, get
 
-**Exercise 8.1** Make a copy of a file and name it "/<your name/>_copy.txt" 
+**Exercise 8.1** Make a copy of a file and name it "**your name**_copy.txt" 
 
 <details>
 <summary>Show answer</summary>
