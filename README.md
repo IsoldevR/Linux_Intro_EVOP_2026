@@ -288,6 +288,7 @@ Tip: if you see something like "your name" between the angle brackets, you are u
 
 ### Even more "most used" commands:
 *Explainer*: tar, gzip, unzip
+
 *Explainer*: more, less, most
 
 **Exercise 9.1** Lets find out what happens when you look into the file for this exercise
