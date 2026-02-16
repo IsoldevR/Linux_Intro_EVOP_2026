@@ -264,12 +264,12 @@ The follwoing exercises we will do on the server!
 <summary>Show answer</summary>
 
   ```
-  cp E8_copy_this_file.txt <your name>_copy.txt
+  cp E8_copy_this_file.txt /<your name/>_copy.txt
   ```
 
 </details>
 
-Tip: if you see something like "/<your name/>" you are usually supposed to change that bit including the angle brackets to something else!
+Tip: if you see something like "/<your /name/>" you are usually supposed to change that bit including the angle brackets to something else!
 
 *Explainer*: cat
 
