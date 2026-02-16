@@ -34,19 +34,9 @@ In the open terminal, we are going to see the file structure by:
 ls
 ```
 
-Then go to the folder xxx
+Then go to a folder you see there
 ```
-cd xxx
-```
-
-Then make a new directory
-```
-mkdir Intro_Unix
-```
-
-And go into the directory
-```
-cd Intro_Unix
+cd /Linux_Intro_EVOP_2026
 ```
 
 **PLEASE USE YOUR STICKY NOTES TO SHOW US WHEN YOU ARE DONE!**
@@ -75,8 +65,10 @@ exit
 
 ### Logging in to the server (remote)
 **Exercise 2** Use your paper to follow the instructions to log onto the server
+
+Remember to use your own user name here!
 ```
-ssh # put here the log + -C
+ssh -C k00457149@andorra.imp.fu-berlin.de
 ```
 
 ### Connectivity
@@ -138,13 +130,14 @@ Tip: this has to be run on your local machine !
 ### Tricks
 *Explainer*: Wildcards
 
-**Exercise 5.1** Download all pdf files, by replacing the file name in the previous command using the "*":
+**Exercise 5.1** Download all pdf files, by adapting the previous command, to reach into the Linux_Intro_EVOP_2026/ folder, and addressing only the .pdf files using the "*":
 
 <details>
 <summary>Show answer</summary>
   
   ```
-  scp -r -C k00457149@andorra.imp.fu-berlin.de:/home/mi/k00457149/Linux_Intro_EVOP_2026/*.pdf .
+  cd Linux_Intro_EVOP_2026/
+  scp -C k00457149@andorra.imp.fu-berlin.de:/home/mi/k00457149/Linux_Intro_EVOP_2026/*.pdf .
   ```
 
 </details>
@@ -155,21 +148,22 @@ Tip: this has to be run on your local machine !
 - The command "history"
 - The command "clear"
 
-**Exercise 5.2** Download the slides to your local machine again, this time use the magic "tab"
+**Exercise 5.2** Move to your home directory, and move back into the folder where you just downoaded the files; this time use the magic "tab"
 
 ```
-<same command as above but without the path finished>
+cd ~
+cd 
 ```
 
-**Exercise 5.3** If your connection to the server doesn't work for some reason; you can download the files to your computer directly:
+**Exercise 5.3** Only if your connection to the server doesn't work for some reason; you can download the files to your computer directly:
 ```
-wget https://github.com/IsoldevR/Linux_Intro_EVOP_2026/master.zip
-unzip master.zip
+git clone https://github.com/IsoldevR/Linux_Intro_EVOP_2026/master.zip
 ```
 
-**Exercise 5.4** Just a check! Where were you when you downloaded these files? Run the following command, and it should return to you the file path where you are:
+**Exercise 5.4** Just a check! Where were you when you downloaded these files? Run the following command, and it should return to you the file path where you are, and with ls should give you a list of files that you expect too:
 ```
 pwd
+ls
 ```
 If that was not where you thought you were, try to correct your mistake or call a TA!
 
