@@ -376,7 +376,7 @@ clear
   awk '$1 == "MH893761.1" {print $1, $4, $5, $6}' E10_Sample_1_mosdepth_summary.txt 
   ```
 
-</details>details>
+</details>
 
 **Exercise 11+** You may be interested in any contigs (chrom) that have a depth higher than ten reads. For example, when you are worried about duplicated regions in your genome. Use awk to filter the file!
 
