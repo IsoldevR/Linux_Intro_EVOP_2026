@@ -127,9 +127,13 @@ The following exercises are done on the **LOCAL machine**!
 
 **Exercise 4** Download the slides to your **local machine**
 ```
-ssh ... # make correct command here
+pwd
+# this should give you the local directory
+scp -r -C k00457149@andorra.imp.fu-berlin.de:/home/mi/k00457149/Linux_Intro_EVOP_2026 .
 ```
 Tip: this has to be run on your local machine !
+-r tells the computer to download a fill directory
+-C tells the computer to compress the files
 
 ### Tricks
 *Explainer*: Wildcards
@@ -140,7 +144,7 @@ Tip: this has to be run on your local machine !
 <summary>Show answer</summary>
   
   ```
-  <same /command as above> 
+  scp -r -C k00457149@andorra.imp.fu-berlin.de:/home/mi/k00457149/Linux_Intro_EVOP_2026/*.pdf .
   ```
 
 </details>
