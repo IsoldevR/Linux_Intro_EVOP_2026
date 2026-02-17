@@ -149,11 +149,11 @@ Explanation:
 - The command "history"
 - The command "clear"
 
-**Exercise 5.2** Move to your home directory, and move back into the folder where you just downoaded the files; this time use the magic "tab"
+**Exercise 5.2** Move to your home directory, and move back into the folder which you just copied from the Workshop_material; this time use the magic "tab"
 
 ```
 cd ~
-cd 
+cd Linux_<tab!>
 ```
 
 **Exercise 5.3** Only if your connection to the data drive doesn't work for some reason; you can download the files from Isolde's GitHub to your computer directly:
