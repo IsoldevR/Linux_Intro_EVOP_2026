@@ -628,18 +628,15 @@ bcftools query -i'QUAL>20 && DP>10 && F_MISSING<0.5 && MAF>0.01' -f'%CHROM %POS 
 <details>
 <summary>Show answer</summary>
   
-  ```
   Firstly, it does a bcftools (google to know what that is) search for SNPs with a quality over 40, and a read depth over 10, a amount of missing positions below 0.5, and a minor allele frequency over 0.01. Then, it returs the columns with the chromosome name, the position of the SNP, the quality of the SNP, and the depth of the SNP. It uses the "calls_10.bcf" file, and pipes the output into head. Some suggestions; 1) try piping into another file viewer program. 2) try removing or adding filters, 3) try changing the fields that are returned.
-  ```
 
 </details>
 
 **Exercise 17** Open the E17_fastqc.sh script and try to understand what the script does. Adapt the file locations, so you can run it!
+
 <details>
 <summary>Show answer</summary>
   
-  ```
   This script does a fastqc (google to know what that is) analysis for a set of reads. Some tips to make it work; 1) check whether the zipping program used in the script fits with the zipping type the files are in your directory.
-  ```
 
 </details>
