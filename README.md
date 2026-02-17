@@ -192,7 +192,8 @@ The follwoing exercises we will do on the server!
 <summary>Show answer</summary>
 
   ```
-  cd <file /path>
+  pwd
+  cd /Linux_Intro_EVOP_2026
   ls
   ```
 
