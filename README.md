@@ -158,7 +158,7 @@ cd
 
 **Exercise 5.3** Only if your connection to the data drive doesn't work for some reason; you can download the files from Isolde's GitHub to your computer directly:
 ```
-git clone https://github.com/IsoldevR/Linux_Intro_EVOP_2026/master.zip
+git clone https://github.com/IsoldevR/Linux_Intro_EVOP_2026
 ```
 
 **Exercise 5.4** Just a check! Where were you when you downloaded these files? Run the following command, and it should return to you the file path where you are, and with ls should give you a list of files that you expect too:
