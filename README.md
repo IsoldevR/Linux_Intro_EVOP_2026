@@ -36,7 +36,7 @@ ls
 
 Then go to a folder you see there
 ```
-cd /Linux_Intro_EVOP_2026
+cd Linux_Intro_EVOP_2026
 ```
 
 **PLEASE USE YOUR STICKY NOTES TO SHOW US WHEN YOU ARE DONE!**
@@ -137,7 +137,7 @@ Explanation:
 <summary>Show answer</summary>
   
   ```
-  cd Linux_Intro_EVOP_2026/
+  cd Linux_Intro_EVOP_2026
   rsync -z -a /srv/evop/software/Workshop_material/Linux_Intro_EVOP_2026/Linux_Intro_EVOP_2026/*.pdf .
   ```
 
@@ -193,7 +193,7 @@ The follwoing exercises we will do on the server!
 
   ```
   pwd
-  cd /Linux_Intro_EVOP_2026
+  cd Linux_Intro_EVOP_2026
   ls
   ```
 
